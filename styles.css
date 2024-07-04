@@ -67,9 +67,10 @@ header li{
 }
 #abt-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1px;
     margin-top: 5rem;
+    
 }
 #grid-box img{
     width: 100%;
@@ -79,10 +80,13 @@ header li{
 }
 #grid-box{
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
     display: grid;
     grid-template-rows: subgrid;
-    grid-row: 1/4;
+    grid-row: span 3;
+    width: 350px;
+    margin: auto;
+    justify-content: space-between;
 }
 #about{
     text-align: center;
@@ -128,8 +132,8 @@ input{
     font-size: medium;
     border-color: rgb(180, 180, 180);
 }
-footer div{
+#foot{
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 30px;
 }
